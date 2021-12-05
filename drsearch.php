@@ -17,11 +17,11 @@
                 <nav class="nav nav-masthead justify-content-center ">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="allpatients.php">Patients</a>
-                    <a class="nav-link" href="search.php">Search</a>
+                    <a class="nav-link" href="search.html">Search</a>
                     <a class="nav-link" href="alldoctors.php">Doctors</a>
                     <a class="nav-link" href="room.html">Book Room</a>
                     <a class="nav-link" href="patient.html">Register patient</a>
-                    <a class="nav-link" href="doctorInfo.php"></a>
+                    <a class="nav-link" href="doctorinfo.php">Doctor Info</a>
                 </nav>
             </div>
         </header>
@@ -41,7 +41,9 @@ $con=mysqli_connect($server,$username,$password);
 if(!$con){
     die('connection to this database failed due to '.mysqli_connect_error());
 }else{
-    echo 'Success';
+    echo '<div class="alert alert-success" >
+    Successful connected to the Database!
+  </div>';
 }
 $D_ID=$_POST['D_ID'];
 
@@ -69,7 +71,7 @@ if ($result1->num_rows > 0) {
     }
     $result2 = $con->query($sql2);
     
-    // if($result2->num_rows>0){
+    if($result2->num_rows>0){
         echo ("<br><ul class='list-group'>   <li class='list-group-item active'>Nurses under the Doctor</li>");
         while($row = $result2->fetch_assoc()){
             echo(
@@ -79,13 +81,13 @@ if ($result1->num_rows > 0) {
 
         echo "</ul> <br>";
         
-    // }
+    }
 
 
     $result3 = $con->query($sql3);
 
     echo($con->error);
-    // if($result3->num_rows > 0){
+    if($result3->num_rows > 0){
         echo ("<ul class='list-group'>   <li class='list-group-item active'>Patients under the Doctor</li>");
         while($row = $result3->fetch_assoc()){
             echo(
@@ -95,7 +97,7 @@ if ($result1->num_rows > 0) {
 
         echo "</ul>";
         
-    // }
+    }
 
 
     

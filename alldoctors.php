@@ -17,11 +17,11 @@
                 <nav class="nav nav-masthead justify-content-center ">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="allpatients.php">Patients</a>
-                    <a class="nav-link" href="search.php">Search</a>
+                    <a class="nav-link" href="search.html">Search</a>
                     <a class="nav-link" href="alldoctors.php">Doctors</a>
                     <a class="nav-link" href="room.html">Book Room</a>
                     <a class="nav-link" href="patient.html">Register patient</a>
-                    <a class="nav-link" href="doctorInfo.php"></a>
+                    <a class="nav-link" href="doctorinfo.php">Doctor Info</a>
                 </nav>
             </div>
         </header>
@@ -41,7 +41,9 @@ $con=mysqli_connect($server,$username,$password);
 if(!$con){
     die('connection to this database failed due to '.mysqli_connect_error());
 }else{
-    echo 'Success';
+  echo '<div class="alert alert-success" >
+  Successful connected to the Database!
+</div>';
 }
 
 $sql = "SELECT * from `asm hospital`.`doctors`";

@@ -25,7 +25,9 @@ $con=mysqli_connect($server,$username,$password);
 if(!$con){
     die('connection to this database failed due to '.mysqli_connect_error());
 }else{
-    echo 'Success';
+  echo '<div class="alert alert-success" >
+  Successful connected to the Database!
+</div>';
 }
 $name=$_POST['name'];
 

@@ -13,19 +13,19 @@
    $P_ID =$_POST['P_ID'];
    $D_ID=$_POST['D_ID'];
    $Nurse_ID=$_POST['Nurse_ID'];
-   $R_Type=$_Post['R_Type'];
-   $R_ID=$_Post['R_ID'];
+   $R_TYPE=$_POST['R_TYPE'];
+   $R_ID=$_POST['R_ID'];
 
 
 
    $sql1="INSERT INTO `asm hospital`.`attends_to` VALUES ( '$P_ID' , '$D_ID')";
 
-   if($R_Type==1){
+   if($R_TYPE==1){
     $sql2="INSERT INTO `asm hospital`.`assigned_to` VALUES ( '$P_ID' ,  '$R_ID' , NULL)";
-    $sql3="INSERT INTO `asm hospital`.`agoverns` VALUES ( '$Nurse_ID' ,  '$R_ID' , NULL)";
+    $sql3="INSERT INTO `asm hospital`.`governs` VALUES ( '$Nurse_ID' ,  '$R_ID' , NULL)";
    }else{
     $sql2="INSERT INTO `asm hospital`.`assigned_to` VALUES ( '$P_ID' , NULL ,'$R_ID' )";
-    $sql3="INSERT INTO `asm hospital`.`agoverns` VALUES ( '$Nurse_ID' , NULL, '$R_ID')";
+    $sql3="INSERT INTO `asm hospital`.`governs` VALUES ( '$Nurse_ID' , NULL, '$R_ID')";
 
    }
 

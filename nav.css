@@ -1,0 +1,40 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background: rgb(2,0,36);
+background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   
+    
+}
+
+.cover-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: white;
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+    color: white;
+    border-bottom-color:white;
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+}
+

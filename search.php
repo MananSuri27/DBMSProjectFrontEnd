@@ -1,15 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Patients</title>
-
+    <title>Search for patient</title>
+    <Link rel="stylesheet" href="nav.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
+    <div class="cover-container d-flex  h-25  ml-auto mr-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                
+                <nav class="nav nav-masthead justify-content-center ">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="allpatients.php">Patients</a>
+                    <a class="nav-link" href="search.html">Search</a>
+                    <a class="nav-link" href="alldoctors.php">Doctors</a>
+                    <a class="nav-link" href="room.html">Book Room</a>
+                    <a class="nav-link" href="patient.html">Register patient</a>
+                    <a class="nav-link" href="doctorinfo.html">Doctor Info</a>
+            </div>
+        </header>
+    </div>
 
 <div class="col-6 mx-auto">
 
@@ -37,7 +53,7 @@ $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
-    echo ("<div class='card'><h5 class='card-header'>Patient Name:" . $row['P_First_Name'] . " ". $row['P_Last_Name']." </h5><div class='card-body'>
+    echo ("<div class='card mb-2'><h5 class='card-header'>Patient Name:" . $row['P_First_Name'] . " ". $row['P_Last_Name']." </h5><div class='card-body'>
     <h5 class='card-text'>Patient ID: ". $row['P_ID']. "</h5>
     <p class='card-text'>Patient DOB: ". $row['P_DOB'] ."</p>
     <p class='card-text'> Patient Sex: ".$row['P_Sex']."</p>

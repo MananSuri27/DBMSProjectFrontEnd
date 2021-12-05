@@ -21,7 +21,7 @@
                     <a class="nav-link" href="alldoctors.php">Doctors</a>
                     <a class="nav-link" href="room.html">Book Room</a>
                     <a class="nav-link" href="patient.html">Register patient</a>
-                    <a class="nav-link" href="doctorinfo.php">Doctor Info</a>
+                    <a class="nav-link" href="doctorinfo.html">Doctor Info</a>
                 </nav>
             </div>
         </header>

@@ -21,7 +21,7 @@
                     <a class="nav-link" href="alldoctors.php">Doctors</a>
                     <a class="nav-link" href="room.html">Book Room</a>
                     <a class="nav-link" href="patient.html">Register patient</a>
-                    <a class="nav-link" href="doctorinfo.php">Doctor Info</a>
+                    <a class="nav-link" href="doctorinfo.html">Doctor Info</a>
                 </nav>
             </div>
         </header>
@@ -29,7 +29,7 @@
 
 <div class="col-6 mx-auto">
 
-  <h1> All Patients</h1>
+  <h1 style="color:white;"> All Patients</h1>
 
 <?php
 $server="localhost";
@@ -52,7 +52,7 @@ $result = $con->query($sql);
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     // echo (" <div class='card'><h5 class='card-header'>Patient Name:$row['P_First_Name'] $row['P_Last_Name'] </h5><div class='card-body'><p class='card-text'>Patient ID: $row['P_ID']</p><p class='card-text'>Patient DOB: $row['P_DOB']</p><p class='card-text'> Patient Sex: $row['P_Sex']</p><p class='card-text'> Medical History: $row['P_Medical_History'] </p><p class='card-text'> Address: $row['P_Address']</p></div></div>" );
-    echo ("<div class='card'><h5 class='card-header'>Patient Name:" . $row['P_First_Name'] . " ". $row['P_Last_Name']." </h5><div class='card-body'>
+    echo ("<div class='card mb-2'><h5 class='card-header'>Patient Name:" . $row['P_First_Name'] . " ". $row['P_Last_Name']." </h5><div class='card-body'>
     <h5 class='card-text'>Patient ID: ". $row['P_ID']. "</h5>
     <p class='card-text'>Patient DOB: ". $row['P_DOB'] ."</p>
     <p class='card-text'> Patient Sex: ".$row['P_Sex']."</p>

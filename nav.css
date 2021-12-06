@@ -38,10 +38,22 @@ nav{
     border-bottom: 0.25rem solid transparent;
 }
 
+
+label{
+    margin: 0;
+    text-align: left;
+    float: left;
+}
+
 .container, form {
     margin:10px auto;
     text-align: center;
 }
+
+button{
+    float: right;
+}
+
 
 
 .nav-link:hover{

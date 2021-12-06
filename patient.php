@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Patients</title>
+    <title>ASM Hospital</title>
     <Link rel="stylesheet" href="nav.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -15,13 +15,14 @@
             <div>
                 
                 <nav class="nav nav-masthead justify-content-center ">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="coverpage.html">About</a>
                     <a class="nav-link" href="allpatients.php">Patients</a>
                     <a class="nav-link" href="search.html">Search</a>
                     <a class="nav-link" href="alldoctors.php">Doctors</a>
                     <a class="nav-link" href="room.html">Book Room</a>
                     <a class="nav-link" href="patient.html">Register patient</a>
-                    <a class="nav-link" href="doctorinfo.php">Doctor Info</a>
+                    <a class="nav-link" href="doctorinfo.html">Doctor Info</a>
                 </nav>
             </div>
         </header>
